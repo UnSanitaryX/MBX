@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<Project xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Scenarios />
+  <Timelines>
+    <Timeline>
+      <Name>Demo: ramp, fault and recovery</Name>
+      <DurationSeconds>15</DurationSeconds>
+      <RepeatCount>1</RepeatCount>
+      <RestoreOnFinish>true</RestoreOnFinish>
+      <Steps>
+        <TimelineStep>
+          <AtSeconds>0</AtSeconds>
+          <Action>SetValue</Action>
+          <Device>Process simulator</Device>
+          <Point>Temperature</Point>
+          <Value>22.5</Value>
+          <DurationSeconds>0</DurationSeconds>
+          <Note />
+        </TimelineStep>
+        <TimelineStep>
+          <AtSeconds>2</AtSeconds>
+          <Action>RampValue</Action>
+          <Device>Process simulator</Device>
+          <Point>Temperature</Point>
+          <Value>35</Value>
+          <DurationSeconds>5</DurationSeconds>
+          <Note />
+        </TimelineStep>
+        <TimelineStep>
+          <AtSeconds>4</AtSeconds>
+          <Action>SetDelay</Action>
+          <Device>Process simulator</Device>
+          <Point />
+          <Value>150</Value>
+          <DurationSeconds>3</DurationSeconds>
+          <Note />
+        </TimelineStep>
+        <TimelineStep>
+          <AtSeconds>9</AtSeconds>
+          <Action>SetResponse</Action>
+          <Device>Process simulator</Device>
+          <Point />
+          <Value>0</Value>
+          <DurationSeconds>2</DurationSeconds>
+          <Note />
+        </TimelineStep>
+        <TimelineStep>
+          <AtSeconds>12</AtSeconds>
+          <Action>RestoreDevice</Action>
+          <Device>Process simulator</Device>
+          <Point />
+          <Value>0</Value>
+          <DurationSeconds>0</DurationSeconds>
+          <Note />
+        </TimelineStep>
+      </Steps>
+    </Timeline>
+  </Timelines>
+  <Version>1</Version>
+  <Name>Modbus Emulator X demo</Name>
+  <Devices>
+    <Device>
+      <Transport>Tcp</Transport>
+      <SerialPort>COM1</SerialPort>
+      <BaudRate>9600</BaudRate>
+      <DataBits>8</DataBits>
+      <Parity>Even</Parity>
+      <StopBits>One</StopBits>
+      <Name>Process simulator</Name>
+      <BindAddress>127.0.0.1</BindAddress>
+      <Port>1502</Port>
+      <UnitId>1</UnitId>
+      <Enabled>true</Enabled>
+      <AllowWrites>false</AllowWrites>
+      <Responding>true</Responding>
+      <DelayMs>0</DelayMs>
+      <DropPercent>0</DropPercent>
+      <ExceptionCode>0</ExceptionCode>
+      <Points>
+        <Point>
+          <Name>Temperature</Name>
+          <Area>HoldingRegister</Area>
+          <Address>0</Address>
+          <Type>Float32</Type>
+          <SwapWords>false</SwapWords>
+          <SwapBytes>false</SwapBytes>
+          <Value>22.5</Value>
+          <Default>22.5</Default>
+          <Scale>1</Scale>
+          <Offset>0</Offset>
+          <Units>deg C</Units>
+          <Simulation>Sine</Simulation>
+          <Minimum>15</Minimum>
+          <Maximum>35</Maximum>
+          <PeriodSeconds>10</PeriodSeconds>
+          <Writable>true</Writable>
+          <Notes />
+        </Point>
+        <Point>
+          <Name>Pressure</Name>
+          <Area>HoldingRegister</Area>
+          <Address>2</Address>
+          <Type>UInt16</Type>
+          <SwapWords>false</SwapWords>
+          <SwapBytes>false</SwapBytes>
+          <Value>6.2</Value>
+          <Default>6.2</Default>
+          <Scale>0.01</Scale>
+          <Offset>0</Offset>
+          <Units>bar</Units>
+          <Simulation>Manual</Simulation>
+          <Minimum>0</Minimum>
+          <Maximum>10</Maximum>
+          <PeriodSeconds>10</PeriodSeconds>
+          <Writable>true</Writable>
+          <Notes />
+        </Point>
+        <Point>
+          <Name>Motor run</Name>
+          <Area>Coil</Area>
+          <Address>0</Address>
+          <Type>Bool</Type>
+          <SwapWords>false</SwapWords>
+          <SwapBytes>false</SwapBytes>
+          <Value>0</Value>
+          <Default>0</Default>
+          <Scale>1</Scale>
+          <Offset>0</Offset>
+          <Units />
+          <Simulation>Manual</Simulation>
+          <Minimum>0</Minimum>
+          <Maximum>100</Maximum>
+          <PeriodSeconds>10</PeriodSeconds>
+          <Writable>true</Writable>
+          <Notes />
+        </Point>
+        <Point>
+          <Name>Healthy</Name>
+          <Area>DiscreteInput</Area>
+          <Address>0</Address>
+          <Type>Bool</Type>
+          <SwapWords>false</SwapWords>
+          <SwapBytes>false</SwapBytes>
+          <Value>1</Value>
+          <Default>1</Default>
+          <Scale>1</Scale>
+          <Offset>0</Offset>
+          <Units />
+          <Simulation>Manual</Simulation>
+          <Minimum>0</Minimum>
+          <Maximum>100</Maximum>
+          <PeriodSeconds>10</PeriodSeconds>
+          <Writable>true</Writable>
+          <Notes />
+        </Point>
+        <Point>
+          <Name>Supply</Name>
+          <Area>InputRegister</Area>
+          <Address>0</Address>
+          <Type>UInt16</Type>
+          <SwapWords>false</SwapWords>
+          <SwapBytes>false</SwapBytes>
+          <Value>240</Value>
+          <Default>240</Default>
+          <Scale>1</Scale>
+          <Offset>0</Offset>
+          <Units />
+          <Simulation>Manual</Simulation>
+          <Minimum>0</Minimum>
+          <Maximum>100</Maximum>
+          <PeriodSeconds>10</PeriodSeconds>
+          <Writable>true</Writable>
+          <Notes />
+        </Point>
+      </Points>
+    </Device>
+  </Devices>
+</Project>

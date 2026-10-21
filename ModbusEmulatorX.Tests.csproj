@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration><Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7D016E84-C5AC-437F-A55F-70D7D424CC14}</ProjectGuid>
+    <OutputType>Exe</OutputType><RootNamespace>ModbusEmulatorX</RootNamespace><AssemblyName>ModbusEmulatorX.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion><OutputPath>.\</OutputPath><IntermediateOutputPath>work\obj\Tests\</IntermediateOutputPath>
+    <Optimize>true</Optimize><WarningLevel>4</WarningLevel><TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup><Reference Include="System"/><Reference Include="System.Core"/><Reference Include="System.Xml.Linq"/><Reference Include="System.Xml"/><Reference Include="System.IO.Compression"/><Reference Include="System.IO.Compression.FileSystem"/><Reference Include="System.Drawing"/><Reference Include="System.Windows.Forms"/></ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="ModbusEmulatorX.Core.csproj"><Project>{7D016E84-C5AC-437F-A55F-70D7D424CC11}</Project><Name>ModbusEmulatorX.Core</Name></ProjectReference>
+    <ProjectReference Include="ModbusEmulatorX.csproj"><Project>{7D016E84-C5AC-437F-A55F-70D7D424CC12}</Project><Name>ModbusEmulatorX</Name></ProjectReference>
+  </ItemGroup>
+  <ItemGroup><Compile Include="Source\Tests.cs"/><Compile Include="Source\NetworkTests.cs"/><Compile Include="Source\TimelineTests.cs"/><None Include="App.config"/></ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
+</Project>
+

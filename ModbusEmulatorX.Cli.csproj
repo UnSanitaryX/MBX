@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration><Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7D016E84-C5AC-437F-A55F-70D7D424CC13}</ProjectGuid>
+    <OutputType>Exe</OutputType><RootNamespace>ModbusEmulatorX</RootNamespace><AssemblyName>ModbusEmulatorX.Cli</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion><OutputPath>.\</OutputPath><IntermediateOutputPath>work\obj\Cli\</IntermediateOutputPath>
+    <Optimize>true</Optimize><WarningLevel>4</WarningLevel><TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup><Reference Include="System"/><Reference Include="System.Core"/></ItemGroup>
+  <ItemGroup><ProjectReference Include="ModbusEmulatorX.Core.csproj"><Project>{7D016E84-C5AC-437F-A55F-70D7D424CC11}</Project><Name>ModbusEmulatorX.Core</Name></ProjectReference></ItemGroup>
+  <ItemGroup><Compile Include="Source\Cli.cs"/><Compile Include="Source\NetworkCli.cs"/><None Include="App.config"/></ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
+</Project>

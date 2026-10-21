@@ -1,0 +1,36 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+                          
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModbusEmulatorX.Core", "ModbusEmulatorX.Core.csproj", "{7D016E84-C5AC-437F-A55F-70D7D424CC11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModbusEmulatorX", "ModbusEmulatorX.csproj", "{7D016E84-C5AC-437F-A55F-70D7D424CC12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModbusEmulatorX.Cli", "ModbusEmulatorX.Cli.csproj", "{7D016E84-C5AC-437F-A55F-70D7D424CC13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModbusEmulatorX.Tests", "ModbusEmulatorX.Tests.csproj", "{7D016E84-C5AC-437F-A55F-70D7D424CC14}"
+EndProject
+Global
+ GlobalSection(SolutionConfigurationPlatforms) = preSolution
+  Debug|Any CPU = Debug|Any CPU
+  Release|Any CPU = Release|Any CPU
+ EndGlobalSection
+ GlobalSection(ProjectConfigurationPlatforms) = postSolution
+  {7D016E84-C5AC-437F-A55F-70D7D424CC11}.Debug|Any CPU.ActiveCfg = Debug|AnyCPU
+  {7D016E84-C5AC-437F-A55F-70D7D424CC11}.Debug|Any CPU.Build.0 = Debug|AnyCPU
+  {7D016E84-C5AC-437F-A55F-70D7D424CC11}.Release|Any CPU.ActiveCfg = Release|AnyCPU
+  {7D016E84-C5AC-437F-A55F-70D7D424CC11}.Release|Any CPU.Build.0 = Release|AnyCPU
+  {7D016E84-C5AC-437F-A55F-70D7D424CC12}.Debug|Any CPU.ActiveCfg = Debug|AnyCPU
+  {7D016E84-C5AC-437F-A55F-70D7D424CC12}.Debug|Any CPU.Build.0 = Debug|AnyCPU
+  {7D016E84-C5AC-437F-A55F-70D7D424CC12}.Release|Any CPU.ActiveCfg = Release|AnyCPU
+  {7D016E84-C5AC-437F-A55F-70D7D424CC12}.Release|Any CPU.Build.0 = Release|AnyCPU
+  {7D016E84-C5AC-437F-A55F-70D7D424CC13}.Debug|Any CPU.ActiveCfg = Debug|AnyCPU
+  {7D016E84-C5AC-437F-A55F-70D7D424CC13}.Debug|Any CPU.Build.0 = Debug|AnyCPU
+  {7D016E84-C5AC-437F-A55F-70D7D424CC13}.Release|Any CPU.ActiveCfg = Release|AnyCPU
+  {7D016E84-C5AC-437F-A55F-70D7D424CC13}.Release|Any CPU.Build.0 = Release|AnyCPU
+  {7D016E84-C5AC-437F-A55F-70D7D424CC14}.Debug|Any CPU.ActiveCfg = Debug|AnyCPU
+  {7D016E84-C5AC-437F-A55F-70D7D424CC14}.Debug|Any CPU.Build.0 = Debug|AnyCPU
+  {7D016E84-C5AC-437F-A55F-70D7D424CC14}.Release|Any CPU.ActiveCfg = Release|AnyCPU
+  {7D016E84-C5AC-437F-A55F-70D7D424CC14}.Release|Any CPU.Build.0 = Release|AnyCPU
+ EndGlobalSection
+EndGlobal
